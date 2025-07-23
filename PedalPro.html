@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PedalPro | Professional Bicycle Repair & Cleaning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-bicycle text-2xl"></i>
+                <a href="#" class="text-xl font-bold">PedalPro</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-green-200 transition">Home</a>
+                <a href="#services" class="hover:text-green-200 transition">Services</a>
+                <a href="#pricing" class="hover:text-green-200 transition">Pricing</a>
+                <a href="#about" class="hover:text-green-200 transition">About</a>
+                <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-green-200">Home</a>
+            <a href="#services" class="block py-2 hover:text-green-200">Services</a>
+            <a href="#pricing" class="block py-2 hover:text-green-200">Pricing</a>
+            <a href="#about" class="block py-2 hover:text-green-200">About</a>
+            <a href="#contact" class="block py-2 hover:text-green-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Bicycle Repair & Cleaning</h1>
+                <p class="text-xl mb-8">We keep your wheels spinning smoothly with expert maintenance and cleaning services.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-green-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Book Now</a>
+                    <a href="#services" class="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-green-700 transition">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 animate-fade-in delay-1">
+                <img src="https://raleighintl.com/wp-content/uploads/BLAZE-2.0-29inch-teaser.jpg" 
+                     alt="Bicycle repair" 
+                     class="rounded-lg shadow-2xl w-full h-auto">
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive bicycle services to keep your ride in top condition</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition animate-fade-in delay-1">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Complete Tune-Up</h3>
+                    <p class="text-gray-600 mb-4">Full inspection and adjustment of all components including brakes, gears, and bearings.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Brake adjustment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Gear tuning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Wheel truing</li>
+                    </ul>
+                    <a href="#contact" class="text-green-600 font-bold hover:underline">Book Service →</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition animate-fade-in delay-2">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-broom text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Deep Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Thorough cleaning of frame, drivetrain, and components to restore like-new condition.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Frame degreasing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Chain cleaning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Wheel polishing</li>
+                    </ul>
+                    <a href="#contact" class="text-green-600 font-bold hover:underline">Book Service →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition animate-fade-in delay-3">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-wrench text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Repairs</h3>
+                    <p class="text-gray-600 mb-4">Specialized repairs for any bicycle issue, from flat tires to complete overhauls.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Flat tire repair</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Suspension service</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Custom builds</li>
+                    </ul>
+                    <a href="#contact" class="text-green-600 font-bold hover:underline">Book Service →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Service Packages</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Affordable pricing for all your bicycle maintenance needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Package -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden animate-fade-in delay-1">
+                    <div class="bg-green-600 text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Basic Clean</h3>
+                        <p class="opacity-80">Perfect for regular maintenance</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold mb-4">R250<span class="text-lg text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Frame cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Chain degreasing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Basic lubrication</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tire inspection</li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Popular Package -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform scale-105 animate-fade-in">
+                    <div class="bg-green-700 text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Premium Tune-Up</h3>
+                        <p class="opacity-80">Our most popular package</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold mb-4">R380<span class="text-lg text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Brake adjustment</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Gear tuning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Wheel truing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bearing check</li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Pro Package -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden animate-fade-in delay-2">
+                    <div class="bg-green-600 text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Pro Overhaul</h3>
+                        <p class="opacity-80">Complete restoration</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-3xl font-bold mb-4">R500<span class="text-lg text-gray-500">/service</span></div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Chain replacement</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Deep cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Component replacement</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Precision tuning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 30-day warranty</li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Bike mechanic" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12 animate-fade-in delay-1">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About PedalPro</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2025, PedalPro has been serving the cycling community with expert bicycle repair and cleaning services. Our mission is to keep cyclists safe and their bikes performing at their best.</p>
+                    <p class="text-gray-600 mb-6">Our certified mechanics have over 5 years of combined experience working with all types of bicycles - from road bikes to mountain bikes, kids bikes to even street bikes.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-medal text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Certified Experts</h4>
+                                <p class="text-gray-600">All our mechanics are certified by our CEO before hiring</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-leaf text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Eco-Friendly</h4>
+                                <p class="text-gray-600">We use biodegradable cleaning products and recycle all waste materials.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-heart text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Community Focused</h4>
+                                <p class="text-gray-600">We sponsor local cycling events and offer discounts for students and seniors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-green-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-green-800 p-8 rounded-lg animate-fade-in delay-1">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"My bike was making strange noises and the gears were slipping. PedalPro fixed everything and now it rides better than when it was new!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold">JS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jamie Smith</h4>
+                            <p class="text-sm opacity-80">Mountain Biker</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-green-800 p-8 rounded-lg animate-fade-in delay-2">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"The deep cleaning service is amazing! My commuter bike was covered in grime and now it looks brand new. Worth every penny."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold">MC</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Maria Chen</h4>
+                            <p class="text-sm opacity-80">Daily Commuter</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-green-800 p-8 rounded-lg animate-fade-in delay-3">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"Fast, friendly service. They fixed my flat tire in 30 minutes while I waited. Will definitely be back for my regular maintenance."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold">TR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Tom Reynolds</h4>
+                            <p class="text-sm opacity-80">Daily Commuter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                    <p class="text-gray-600">Book an appointment or ask us any questions about our services</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8 animate-fade-in">
+                    <form id="contact-form" action="https://formspree.io/f/xeozaeeb" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Needed</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="Basic Clean">Basic Clean</option>
+                                <option value="Premium Tune-Up">Premium Tune-Up</option>
+                                <option value="Pro Overhaul">Pro Overhaul</option>
+                                <option value="Custom Repair">Custom Repair</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg">
+                        <p>Thank you for your message! We'll get back to you soon.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in delay-1">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-green-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Our Location</h3>
+                        <p class="text-gray-600"1<br>6 Polplar Ave<br>Witkoppen, Sandton, 2068</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-green-600 mb-4">
+                            <i class="fas fa-phone-alt text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Call Us</h3>
+                        <p class="text-gray-600">(+27) 66 289 3053<br>Mon-Sat: 10am-5pm</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-green-600 mb-4">
+                            <i class="fas fa-envelope text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Email Us</h3>
+                        <p class="text-gray-600">lehlogonolothatoledwaba@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bicycle text-2xl"></i>
+                        <span class="text-xl font-bold">PedalPro</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional bicycle repair and cleaning services to keep you riding smoothly.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                  
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Bicycle Tune-Ups</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Deep Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Wheel Truing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Brake Adjustments</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Gear Tuning</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for maintenance tips and special offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-green-600 px-4 py-2 rounded-r-lg hover:bg-green-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PedalPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-green-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+        
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
